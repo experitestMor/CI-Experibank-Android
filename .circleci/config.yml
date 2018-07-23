@@ -37,8 +37,9 @@ jobs:
         - /usr/local/android-sdk-linux/build-tools/25.0.0
         - /usr/local/android-sdk-linux/extras/android/m2repository
     steps:
+    
       - checkout
-
+      - run: unset ANDROID_NDK_HOME
       # Download and cache dependencies
       - restore_cache:
           keys:
