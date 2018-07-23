@@ -23,6 +23,7 @@ jobs:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
       dependencies:
+        - run: unset ANDROID_NDK_HOME
         # Android SDK Platform 25
         - run: if [ ! -d "/usr/local/android-sdk-linux/platforms/android-25" ]; then echo y | android update sdk --no-ui --all --filter "android-25"; fi
         # Android SDK Build-tools, revision 25.0.0
