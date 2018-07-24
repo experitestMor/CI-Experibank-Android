@@ -23,11 +23,6 @@ jobs:
           command: ./gradlew assemble
       - run: chmod -R +x ./scripts
       - run: ./scripts/upload-app.sh
-      - store_artifacts:
-          path: app/build/reports
-          destination: reports
-      - store_test_results:
-          path: app/build/test-results
   test:
     working_directory: ~/code
     docker:
@@ -53,6 +48,6 @@ workflows:
     build_and_test:
         jobs:
             - build
-            - test
-                requires:
-                    build
+            - test:
+               requires:
+                 build
