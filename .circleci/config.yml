@@ -24,7 +24,7 @@ jobs:
       - run:
           name: assemble apk
           command: ./gradlew assemble
-      - run: cd build
+      - run: cd app
       - run: ls
       - store_artifacts:
           path: app/build/reports
