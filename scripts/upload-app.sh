@@ -1,1 +1,1 @@
-curl -v https://sales.experitest.com/api/v1/applications/new?project=Default -H "Authorization: Bearer $accessKey" -F "@$PWD/app/build/outputs/apk/app-debug.apk"
+curl -v https://sales.experitest.com/api/v1/applications/new?project=Default -H "Authorization: Bearer $accessKey" -F "file=@$PWD/app/build/outputs/apk/app-debug.apk"
